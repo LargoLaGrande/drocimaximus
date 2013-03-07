@@ -1,1 +1,39 @@
 basic firmware retrieving and content extraction.
+
+Prerequisites
+=============
+
+Humax iCord HD Firmware
+-----------------------
+In order to create your own firmware the original firmware archive provided by
+Humax is needed. Download and extract to './original_firmware'.
+Will be downloaded and extracted automatically by extract.py too.
+
+http://www.humax-digital.de/products/hdpvr.zip
+
+humidify tool
+-------------
+In order to extract the Humax firmware the humidify tool created by af123 is
+needed. Download, extract and place in './bin'.
+Will not be downloaded and extracted automatically by extract.py.
+
+http://hummy.tv/forum/threads/humidify-hdf-file-utility.235/
+http://www20.zippyshare.com/v/27034196/file.html
+
+firmware-mod-kit
+----------------
+For creating squashfs filesystem images the firmware-mod-kit is needed.
+Retrieve using subversion client, compile afterwards.
+Will be downloaded and compiled automatically by extract.py too.
+
+ svn checkout http://firmware-mod-kit.googlecode.com/svn/ firmware-mod-kit-read-only
+ cd firmware-mod-kit-read-only/trunk/src
+ ./configure
+ make
+
+Extraction
+==========
+ python ./extract.py
+
+That's it, that's all -- './extracted_root/' will then contain the extracted
+firmware root.
