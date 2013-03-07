@@ -1,0 +1,7 @@
+firmware-mod-kit-read-only
+original_firmware
+bin
+extracted_root
+
+*~
+*.pyc
